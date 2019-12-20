@@ -1,18 +1,18 @@
 // Imports and constants
-var express = require('express');
-var exphbs = require('express-handlebars');
-var cloudinary = require('cloudinary').v2;
-var bodyParser = require('body-parser');
-var fs = require('fs');
+const express = require('express');
+const exphbs = require('express-handlebars');
+const cloudinary = require('cloudinary').v2;
+const bodyParser = require('body-parser');
+const fs = require('fs');
 const MongoClient = require('mongodb').MongoClient;
-var app = express();
+const app = express();
 const fetch = require('node-fetch');
 const opencage = require('opencage-api-client');
 const fileUpload = require('express-fileupload');
-var portnumber = process.env.PORT || 3000;
+const portnumber = process.env.PORT || 3000;
 const dbSecret = JSON.parse(fs.readFileSync('./javascript/dbsecrets.json'));
 const url = "mongodb+srv://catspotteam:" + dbSecret.key + "@cat-spot-vx3kz.mongodb.net/test?retryWrites=true&w=majority";
-var db;
+const db;
 
 cloudinary.config({ 
     cloud_name: 'dlacs8amd', 
