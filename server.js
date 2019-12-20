@@ -81,10 +81,6 @@ async function main() {
           layout: false,
           post: cats.reverse()
         });
-
-        //res.status(200).sendFile(__dirname + "/index.html");
-        // Eventually, when we use views, we can call res.render('indexView', { 'catarray' : cats });
-        // so that we can pass the backend cats to the front end
     });
 
     // GET /cat-locations - gets all cats from the database as a list
